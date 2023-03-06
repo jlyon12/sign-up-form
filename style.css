@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,400&display=swap");
+
+:root {
+	--color-primary: #fb8500;
+	--color-secondary: #ffb703;
+	--color-background: #023047;
+	--color-light: #8ecae6;
+	--color-text: #f4e9cd;
+	--color-anchor: #219ebc;
+
+	--font-family: "Poppins", sans-serif;
+	--font-weight-light: 200;
+	--font-weight-regular: 400;
+	--font-weight-strong: 600;
+
+	--font-size-h1: 4rem;
+	--font-size-h2: 3rem;
+	--font-size-h3: 2.5rem;
+	--font-size-text: 1.5rem;
+
+	--border-radius: 8px;
+}
+
+*,
+:before,
+:after {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: var(--font-family);
+	line-height: 2rem;
+}
+
+.italicize {
+	font-style: italic;
+}
+
+.page-wrapper {
+	display: flex;
+	height: 100vh;
+}
+
+.main-image {
+	flex-basis: 30%;
+	background-color: var(--color-background);
+}
+
+.main-content {
+	flex-basis: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 5vw;
+}
+
+.form-row {
+	display: flex;
+	justify-content: space-around;
+}
+
+.form-input {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}

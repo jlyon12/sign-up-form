@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>Sign-Up</title>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="main-image"></div>
+        <div class="main-content">
+            <div class="header-text">
+                <p>This is not a real online service! You know you need something like this in your life to help you
+                    realize your deepest dreams. Sign up <span class="italicize">now</span> to get started.</p>
+                <p>You <span class="italicize">know</span> you want to.</p>
+            </div>
+            <div class="form-wrapper">
+                <form id="new-user-form" action="./index.html" method="GET">
+                    <fieldset>
+                        <legend>Let's do this!</legend>
+
+                        <div class="form-row">
+                            <div class="form-input">
+                                <label for="first-name">First Name:</label>
+                                <input type="text" id="first-name" name="first-name" placeholder="William">
+                            </div>
+                            <div class="form-input">
+                                <label for="last-name">Last Name:</label>
+                                <input type="text" id="last-name" name="last-name" placeholder="Bones">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-input">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" placeholder="williamthegreat@myemail.com">
+                            </div>
+                            <div class="form-input">
+                                <label for="telephone">Phone Number:</label>
+                                <input type="tel" id="telephone" name="telephone" placeholder="720-643-1000">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-input">
+                                <label for="pwd">Password:</label>
+                                <input type="password" id="pwd" name="pwd" placeholder="New password">
+                            </div>
+                            <div class="form-input">
+                                <label for="pwd-confirm">Confirm:</label>
+                                <input type="password" id="pwd-confirm" name="pwd-confirm"
+                                    placeholder="Confirm Password">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="call-to-action">
+                <button type="submit" form="new-user-form">Sign Up</button>
+                <p>Already have an account? <a href="index.html">Log In</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
