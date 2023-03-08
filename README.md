@@ -3,7 +3,8 @@
 Sign Up Form Project Assignment from The Odin Project
 
 <strong>Live Demo</strong> : <br>
-https://github.com/probableactions/sign-up-form/deployments/activity_log?environment=github-pages
+https://probableactions.github.io/sign-up-form/
+
 
 <strong>Image Attributions:</strong>
 
