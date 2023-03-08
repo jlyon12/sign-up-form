@@ -2,21 +2,25 @@
 
 Sign Up Form Project Assignment from The Odin Project
 
-Image Attributions:
+<strong>Live Demo</strong> : <br>
+https://github.com/probableactions/sign-up-form/deployments/activity_log?environment=github-pages
 
-Sidebar background image :
-Photo by Volkan Vardar from Pexels: https://www.pexels.com/photo/big-green-leaves-of-monstera-5699665/
+<strong>Image Attributions:</strong>
 
-Valid Input Checkmark :
-https://www.svgrepo.com/svg/505327/check-circle
-COLLECTION: Software Mansion Line Icons
-LICENSE: MIT License
-AUTHOR: Software Mansion
+Sidebar background image : <br>
+Photo by Volkan Vardar from Pexels: <br> 
+https://www.pexels.com/photo/big-green-leaves-of-monstera-5699665/
+
+Valid Input Checkmark : <br>
+https://www.svgrepo.com/svg/505327/check-circle <br>
+COLLECTION: Software Mansion Line Icons <br>
+LICENSE: MIT License <br>
+AUTHOR: Software Mansion <br>
 _I have edited the source file to change the color_
 
-Invalid Input Mark :
-https://www.svgrepo.com/svg/505351/cross-circle
-COLLECTION: Software Mansion Line Icons
-LICENSE: MIT License
-AUTHOR: Software Mansion
-_I have edited the source file to change the color_
+Invalid Input Mark : <br>
+https://www.svgrepo.com/svg/505351/cross-circle <br>
+COLLECTION: Software Mansion Line Icons <br>
+LICENSE: MIT License <br>
+AUTHOR: Software Mansion <br>
+_I have edited the source file to change the color_ <br>
