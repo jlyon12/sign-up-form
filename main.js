@@ -5,6 +5,7 @@ const email = document.getElementById("email");
 const phoneNumber = document.getElementById("phone-number");
 const password = document.getElementById("password");
 const passwordConfirm = document.getElementById("password-confirm");
+const submitButton = document.getElementById("submit");
 
 function validateFirstName() {
 	const namePattern = new RegExp("[A-Z]+[A-Za-z-]{1,}");
@@ -51,9 +52,8 @@ function validateLastName() {
 }
 
 function validateEmail() {
-	const emailPattern = new RegExp(
-		"[A-Za-z0-9!#$%&'*+-/=?^_`{|}~.]+@+[A-Za-z0-9-]+.+[A-Za-z]{2,}"
-	);
+	const emailPattern =
+		/[A-Za-z0-9!#$%&'*+-/=?^_`{|}~.]+@+[A-Za-z0-9-]+\.+[A-Za-z]{2,}/;
 	const tempDiv = document.getElementById("temp-email");
 	const emailValidMark = document.getElementById("email-valid-mark");
 	const emailInvalidMark = document.getElementById("email-invalid-mark");
@@ -74,7 +74,17 @@ function validateEmail() {
 }
 
 function validatePhoneNumber() {
-	const phoneNumberPattern = new RegExp("[0-9]{3}-+[0-9]{3}-+[0-9]{4}");
+	phoneNumber.addEventListener("input", (e) => {
+		let x = e.target.value
+			.replace(/\D/g, "")
+			.match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+		console.log(x);
+		phoneNumber.value = !x[2]
+			? x[1]
+			: "(" + x[1] + ") " + x[2] + (x[3] ? "-" + x[3] : "");
+	});
+	const phoneNumberPattern = /\([0-9]{3}\) [0-9]{3}-[0-9]{4}/;
+
 	const tempDiv = document.getElementById("temp-phone-number");
 	const phoneNumberValidMark = document.getElementById(
 		"phone-number-valid-mark"
@@ -133,10 +143,12 @@ function confirmPasswordMatch() {
 	if (passwordConfirm.value !== "") {
 		tempDiv.classList.add("hidden");
 		if (passwordConfirm.value === password.value) {
+			submitButton.disabled = false;
 			passwordConfirmInvalidMark.classList.add("hidden");
 			passwordConfirmValidMark.classList.remove("hidden");
 			passwordError.classList.add("hidden");
 		} else {
+			submitButton.disabled = true;
 			passwordConfirmValidMark.classList.add("hidden");
 			passwordConfirmInvalidMark.classList.remove("hidden");
 			passwordError.classList.remove("hidden");
@@ -148,7 +160,7 @@ function confirmPasswordMatch() {
 	}
 }
 
-form.addEventListener("change", () => {
+form.addEventListener("input", () => {
 	validateFirstName();
 	validateLastName();
 	validateEmail();
