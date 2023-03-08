@@ -1,13 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,400&display=swap");
 
 :root {
-	--color-primary: #fb8500;
-	--color-secondary: #8ecae6;
-	--color-background: #f4e9cd;
+	--color-accent: #2c6c50;
 	--color-light: #f4e9cd;
 	--color-dark: #000000;
-	--color-text-light: #f4e9cd;
-	--color-text-dark: #000000;
 
 	--font-family: "Poppins", sans-serif;
 	--font-weight-light: 200;
@@ -30,6 +26,10 @@
 	padding: 0px;
 }
 
+.hidden {
+	display: none;
+}
+
 body {
 	font-family: var(--font-family);
 	line-height: 2rem;
@@ -42,12 +42,18 @@ body {
 .page-wrapper {
 	display: flex;
 	min-height: 100vh;
+	background-color: var(--color-light);
 }
 
 .sidebar {
 	position: relative;
-	flex: 0 0 500px;
-	text-align: center;
+	flex: 0 0 35%;
+	z-index: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-right: 4rem;
 }
 
 .sidebar img {
@@ -56,69 +62,66 @@ body {
 	height: 100%;
 	object-fit: cover;
 	overflow: hidden;
+	position: absolute;
+	top: 0;
+	z-index: -1;
 }
 
 .sidebar p:first-of-type {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	margin-top: 25%;
 	width: 6ch;
-	/* background-color: var(--color-primary); */
 	background-color: var(--color-dark);
-	color: var(--color-text-light);
+	color: var(--color-light);
 	border: 5px solid var(--color-light);
 	font-size: var(--font-size-h1);
 	font-weight: var(--font-weight-strong);
 	line-height: 3.5rem;
-
 	padding: 2rem;
+	margin-top: 25%;
 }
 
 .sidebar p:last-of-type {
-	position: absolute;
-	bottom: 0px;
 	width: 100%;
-	margin-bottom: 1rem;
-	color: var(--color-text-light);
+	margin-bottom: 5%;
+	color: var(--color-light);
 	text-align: center;
 }
 
 .sidebar a {
 	text-decoration: none;
-	color: var(--color-secondary);
+	color: var(--color-accent);
 }
 
 .sidebar a:hover {
-	color: var(--color-text-light);
+	color: var(--color-light);
 }
 
 .main-content {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	padding: 0 10vw 0 10vw;
-	background-color: var(--color-background);
+	margin: 0 auto;
 }
-
+.header-text {
+	font-size: var(--font-size-h4);
+	line-height: 3rem;
+}
 legend {
 	font-size: var(--font-size-h2);
 	font-weight: var(--font-weight-strong);
+	color: var(--color-accent);
 }
 
 fieldset {
 	border: none;
-	padding-top: 2rem;
+	padding-top: 5%;
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	gap: 2rem;
 }
 .form-row {
 	display: flex;
 	justify-content: flex-start;
-	gap: 4rem;
+	gap: 10%;
 }
 
 .form-input {
@@ -135,14 +138,23 @@ label {
 input {
 	height: 3rem;
 	width: 250px;
+	border: 1px solid transparent;
+}
+
+input:focus {
+	border: 1px solid transparent;
+}
+
+.input-hint {
+	font-size: 0.75rem;
 }
 
 button {
 	appearance: none;
 	background-color: var(--color-dark);
-	color: var(--color-text-light);
+	color: var(--color-light);
 	border-radius: var(--border-radius);
-	border-color: transparent;
+	border: 1px solid transparent;
 	font-size: var(--font-size-h4);
 	font-weight: var(--font-weight-strong);
 	padding: 1rem;
@@ -153,20 +165,65 @@ button:hover {
 }
 
 button:active {
-	background-color: var(--color-secondary);
-	border: transparent;
+	background-color: var(--color-accent);
 }
 
 .main-content a {
 	text-decoration: none;
-	color: var(--color-text-dark);
+	color: var(--color-dark);
 	font-weight: var(--font-weight-strong);
 }
 
 .main-content a:hover {
-	color: var(--color-secondary);
+	color: var(--color-accent);
 }
 
 .call-to-action p {
 	margin-top: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+	.page-wrapper {
+		flex-direction: column;
+	}
+
+	.sidebar {
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		padding: 20px;
+		margin: 0;
+	}
+	.sidebar p:first-of-type {
+		margin: 0;
+	}
+	.sidebar p:last-of-type {
+		margin: 0;
+	}
+	.main-content {
+		background-color: var(--color-light);
+		min-height: 100vh;
+		align-items: center;
+		justify-content: space-around;
+		gap: 2rem;
+		padding: 2rem 0;
+	}
+
+	.header-text {
+		width: 80%;
+	}
+	.form-row {
+		flex-direction: column;
+	}
+	legend {
+		margin-bottom: 2rem;
+	}
+	input {
+		width: 100%;
+	}
+	.call-to-action {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 2rem;
+	}
 }
