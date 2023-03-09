@@ -30,15 +30,10 @@
 	display: none;
 }
 
-.temp {
-	height: 3rem;
-	width: 3rem;
-	background-color: transparent;
-}
-
 body {
 	font-family: var(--font-family);
 	line-height: 2rem;
+	background-color: var(--color-light);
 }
 
 .italicize {
@@ -48,7 +43,6 @@ body {
 .page-wrapper {
 	display: flex;
 	min-height: 100vh;
-	background-color: var(--color-light);
 }
 
 .sidebar {
@@ -59,7 +53,6 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	margin-right: 5%;
 }
 
 .sidebar img {
@@ -103,14 +96,24 @@ body {
 
 .main-content {
 	display: flex;
+	width: 100%;
 	flex-direction: column;
-	justify-content: space-around;
+	align-items: flex-start;
+	justify-content: space-between;
 	margin: 0 auto;
 }
 .header-text {
 	font-size: var(--font-size-h4);
-	line-height: 3rem;
+	line-height: 2rem;
+	margin-top: 2rem;
+	margin-right: 2rem;
 }
+.header-text,
+.form-wrapper,
+.call-to-action {
+	margin-left: 10%;
+}
+
 legend {
 	font-size: var(--font-size-h2);
 	font-weight: var(--font-weight-strong);
@@ -136,11 +139,14 @@ fieldset {
 	flex-wrap: wrap;
 }
 
-.input-container {
+.label-container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	gap: 2%;
+}
+
+.validation-img {
+	height: 2rem;
 }
 
 label {
@@ -165,10 +171,6 @@ input:focus {
 .password-mismatch {
 	font-size: 0.75rem;
 	color: #a24343;
-}
-
-.checkmark {
-	height: 3rem;
 }
 
 button {
@@ -202,6 +204,31 @@ button:active {
 
 .call-to-action p {
 	margin-top: 1rem;
+}
+.footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	padding: 0 2rem 0 2rem;
+	background-color: var(--color-accent);
+	color: var(--color-light);
+	font-size: 0.8rem;
+}
+
+.footer a {
+	color: var(--color-light);
+	font-weight: var(--font-weight-regular);
+}
+.footer a:hover {
+	color: var(--color-dark);
+}
+
+.footer img {
+	display: block;
+	max-width: 100%;
+	height: 1.5rem;
 }
 
 @media screen and (max-width: 1000px) {

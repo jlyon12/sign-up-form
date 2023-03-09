@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
     <title>Sign-Up</title>
@@ -19,7 +19,9 @@
             <img src="./images/pexels-volkan-vardar-5699665.jpg" alt="monstera plant image">
             <p>Photo by Volkan Vardar from <a
                     href=" https://www.pexels.com/photo/big-green-leaves-of-monstera-5699665/">Pexels</a></p>
+
         </div>
+
         <div class="main-content" id="main-page">
             <div class="header-text">
 
@@ -39,88 +41,80 @@
 
                         <div class="form-row">
                             <div class="form-input">
-                                <label for="first-name">First Name</label>
-                                <div class="input-container">
-
-                                    <input required pattern="[A-Z]+[A-Za-z-]{1,}" title="Please capitalize your name"
-                                        type="text" id="first-name" name="first-name" placeholder=" Robert">
-                                    <div class="temp" id="temp-first-name"></div>
-                                    <img class="checkmark hidden" id="first-name-valid-mark"
+                                <div class="label-container">
+                                    <label for="first-name">First Name</label>
+                                    <img class="validation-img hidden" id="first-name-valid-mark"
                                         src="./images/valid-checkmark.svg">
-                                    <img class="checkmark hidden" id="first-name-invalid-mark"
+                                    <img class="validation-img hidden" id="first-name-invalid-mark"
                                         src="./images/invalid-mark.svg">
                                 </div>
+                                <input required pattern="[A-Z]+[A-Za-z-]{1,}" title="Please capitalize your name"
+                                    type="text" id="first-name" name="first-name" placeholder=" Robert">
                             </div>
                             <div class="form-input">
-                                <label for="last-name">Last Name</label>
-                                <div class="input-container">
-                                    <input required pattern="[A-Z]+[A-Za-z-]{1,}" title="Please capitalize your name"
-                                        type="text" id="last-name" name="last-name" placeholder=" Plant">
-                                    <div class="temp" id="temp-last-name"></div>
-                                    <img class="checkmark hidden" id="last-name-valid-mark"
+                                <div class="label-container">
+                                    <label for="last-name">Last Name</label>
+                                    <img class="validation-img hidden" id="last-name-valid-mark"
                                         src="./images/valid-checkmark.svg">
-                                    <img class="checkmark hidden" id="last-name-invalid-mark"
+                                    <img class="validation-img hidden" id="last-name-invalid-mark"
                                         src="./images/invalid-mark.svg">
                                 </div>
+                                <input required pattern="[A-Z]+[A-Za-z-]{1,}" title="Please capitalize your name"
+                                    type="text" id="last-name" name="last-name" placeholder=" Plant">
+
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-input">
-                                <label for="email">Email</label>
-                                <div class="input-container">
-
-                                    <input required
-                                        pattern="[A-Za-z0-9!#$%&'*+-/=?^_`{|}~.]+@+[A-Za-z0-9-]+\.+[A-Za-z]{2,}"
-                                        title=" Please enter a valid email address" type="email" id="email" name="email"
-                                        placeholder=" plantdaddy@gmail.com">
-                                    <div class="temp" id="temp-email"></div>
-                                    <img class="checkmark hidden" id="email-valid-mark"
+                                <div class="label-container">
+                                    <label for="email">Email</label>
+                                    <img class="validation-img hidden" id="email-valid-mark"
                                         src="./images/valid-checkmark.svg">
-                                    <img class="checkmark hidden" id="email-invalid-mark"
+                                    <img class="validation-img hidden" id="email-invalid-mark"
                                         src="./images/invalid-mark.svg">
                                 </div>
-
+                                <input required pattern="[A-Za-z0-9!#$%&'*+-/=?^_`{|}~.]+@+[A-Za-z0-9-]+\.+[A-Za-z]{2,}"
+                                    title=" Please enter a valid email address" type="email" id="email" name="email"
+                                    placeholder=" plantdaddy@gmail.com">
                             </div>
                             <div class="form-input">
-                                <label for="phone-number">Phone Number</label>
-                                <div class="input-container">
-                                    <input required pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}" title=" Please use hyphens"
-                                        type="tel" id="phone-number" name="phone-number" placeholder=" (281) 330-8004">
-                                    <div class="temp" id="temp-phone-number"></div>
-                                    <img class="checkmark hidden" id="phone-number-valid-mark"
+                                <div class="label-container">
+                                    <label for="phone-number">Phone Number</label>
+                                    <img class="validation-img hidden" id="phone-number-valid-mark"
                                         src="./images/valid-checkmark.svg">
-                                    <img class="checkmark hidden" id="phone-number-invalid-mark"
+                                    <img class="validation-img hidden" id="phone-number-invalid-mark"
                                         src="./images/invalid-mark.svg">
                                 </div>
+                                <input required pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}" title=" Please use hyphens"
+                                    type="tel" id="phone-number" name="phone-number" placeholder=" (281) 330-8004">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-input">
-                                <label for="password">Password</label>
-                                <div class="input-container">
-                                    <input required pattern="[A-Za-z0-90-9!()-.?{}_`~;:!@#$%^&*+=]{8,}" type="password"
-                                        id="password" name="password" placeholder=" New password">
-                                    <div class="temp" id="temp-password"></div>
-                                    <img class="checkmark hidden" id="password-valid-mark"
+                                <div class="label-container">
+                                    <label for="password">Password</label>
+                                    <img class="validation-img hidden" id="password-valid-mark"
                                         src="./images/valid-checkmark.svg">
-                                    <img class="checkmark hidden" id="password-invalid-mark"
+                                    <img class="validation-img hidden" id="password-invalid-mark"
                                         src="./images/invalid-mark.svg">
                                 </div>
+                                <input required pattern="[A-Za-z0-90-9!()-.?{}_`~;:!@#$%^&*+=]{8,}" type="password"
+                                    id="password" name="password" placeholder=" New password">
                                 <p class="input-hint">Must be at least 8 characters</p>
                             </div>
                             <div class="form-input">
-                                <label for="password-confirm">Confirm</label>
-                                <div class="input-container">
-                                    <input required pattern="[A-Za-z0-90-9!()-.?{}_`~;:!@#$%^&*+=]{8,}" type="password"
-                                        id="password-confirm" name="password-confirm" placeholder=" Confirm Password">
-                                    <div class="temp" id="temp-password-confirm"></div>
-                                    <img class="checkmark hidden" id="password-confirm-valid-mark"
+                                <div class="label-container">
+                                    <label for="password-confirm">Confirm</label>
+                                    <img class="validation-img hidden" id="password-confirm-valid-mark"
                                         src="./images/valid-checkmark.svg">
-                                    <img class="checkmark hidden" id="password-confirm-invalid-mark"
+                                    <img class="validation-img hidden" id="password-confirm-invalid-mark"
                                         src="./images/invalid-mark.svg">
                                 </div>
+                                <input required pattern="[A-Za-z0-90-9!()-.?{}_`~;:!@#$%^&*+=]{8,}" type="password"
+                                    id="password-confirm" name="password-confirm" placeholder=" Confirm Password">
+
                                 <p id="password-error" class="hidden password-mismatch">Please ensure your passwords
                                     match</p>
                             </div>
@@ -132,8 +126,14 @@
                 <button id="submit" type="submit" form="new-user-form">Sign Up</button>
                 <p>Already have an account? <a href="./index.html">Log In</a></p>
             </div>
+            <footer class="footer">
+                <p>Created by <a href="https://github.com/probableactions">probableactions</a></p>
+                <img src="./images/github-mark-white.svg" alt="GitHub logo">
+            </footer>
         </div>
+
     </div>
+
 </body>
 
 </html>
