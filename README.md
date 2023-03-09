@@ -25,5 +25,11 @@ LICENSE: MIT License <br>
 AUTHOR: Software Mansion <br>
 _I have edited the source file to change the color_ <br>
 
+Dark Mode SVG Vector <br>
+https://www.svgrepo.com/svg/315691/dark-mode <br>
+COLLECTION: Tiny Interface Icons <br>
+LICENSE: MIT License br>
+AUTHOR: css.gg <br>
+
 GitHub Logo Mark : <br>
 https://github.com/logos <br>

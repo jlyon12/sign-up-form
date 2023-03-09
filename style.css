@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap");
 
 :root {
-	--color-accent: #2c6c50;
-	--color-light: #f4e9cd;
-	--color-dark: #000000;
-
 	--font-family: "Poppins", sans-serif;
 	--font-weight-light: 300;
 	--font-weight-regular: 400;
@@ -16,6 +12,32 @@
 	--font-size-h4: 1.25rem;
 
 	--border-radius: 8px;
+}
+
+.lightmode {
+	--color-background: #000000;
+	--color-background-alt: #f4e9cd;
+	--color-accent: #2c6c50;
+	--color-dark: #000000;
+	--color-light: #f4e9cd;
+	--color-text: #f4e9cd;
+	--color-text-alt: #000000;
+	--color-border: #f4e9cd;
+	--color-input: #ffffff;
+	--color-input-text: #000000;
+}
+
+.darkmode {
+	--color-background: #f4e9cd;
+	--color-background-alt: #000000;
+	--color-accent: #2c6c50;
+	--color-dark: #000000;
+	--color-light: #f4e9cd;
+	--color-text: #000000;
+	--color-text-alt: #afafaf;
+	--color-border: #000000;
+	--color-input: #181818;
+	--color-input-text: #ffffff;
 }
 
 *,
@@ -33,7 +55,8 @@
 body {
 	font-family: var(--font-family);
 	line-height: 2rem;
-	background-color: var(--color-light);
+	background-color: var(--color-background-alt);
+	color: var(--color-text-alt);
 }
 
 .page-wrapper {
@@ -87,9 +110,25 @@ body {
 }
 
 .sidebar a:hover {
-	color: var(--color-light);
+	color: var(--color-text);
 }
 
+.toggle-btn {
+	align-self: flex-end;
+	padding: 5px;
+	color: transparent;
+	background-color: transparent;
+}
+.toggle-btn:hover {
+	color: transparent;
+	background-color: transparent;
+}
+.toggle-btn svg {
+	display: block;
+	width: 100%;
+	height: 3rem;
+	color: var(--color-text-alt);
+}
 .main-content {
 	display: flex;
 	width: 100%;
@@ -108,7 +147,7 @@ body {
 	font-size: var(--font-size-h4);
 	font-weight: var(--font-weight-light);
 	line-height: 2rem;
-	margin-top: 3rem;
+	margin-top: 2rem;
 	margin-right: 2rem;
 	max-width: 666px;
 }
@@ -169,6 +208,8 @@ input {
 	height: 3rem;
 	width: 250px;
 	border: 1px solid transparent;
+	background-color: var(--color-input);
+	color: var(--color-input-text);
 }
 
 input:focus {
@@ -186,13 +227,13 @@ input:focus {
 
 button {
 	appearance: none;
-	background-color: var(--color-dark);
-	color: var(--color-light);
+	background-color: var(--color-background);
+	color: var(--color-text);
 	border-radius: var(--border-radius);
 	border: 1px solid transparent;
 	font-size: var(--font-size-h4);
 	font-weight: var(--font-weight-strong);
-	padding: 1rem;
+	padding: 0.5rem;
 }
 
 button:hover {
@@ -205,7 +246,7 @@ button:active {
 
 .main-content a {
 	text-decoration: none;
-	color: var(--color-dark);
+	color: var(--color-text-alt);
 	font-weight: var(--font-weight-strong);
 }
 
@@ -229,16 +270,16 @@ button:active {
 	gap: 1rem;
 	padding: 0 2rem 0 2rem;
 	background-color: var(--color-accent);
-	color: var(--color-light);
+	color: var(--color-text);
 	font-size: 0.8rem;
 }
 
 .footer a {
-	color: var(--color-light);
+	color: var(--color-text);
 	font-weight: var(--font-weight-regular);
 }
 .footer a:hover {
-	color: var(--color-dark);
+	color: var(--color-text-alt);
 }
 
 .footer img {
@@ -266,12 +307,11 @@ button:active {
 		margin: 0;
 	}
 	.main-content {
-		background-color: var(--color-light);
+		background-color: var(--color-background-alt);
 		min-height: 100vh;
 		align-items: center;
 		justify-content: space-around;
 		gap: 2rem;
-		padding: 2rem 0;
 	}
 
 	.header-text {
@@ -285,12 +325,9 @@ button:active {
 	fieldset {
 		gap: 1rem;
 	}
-	input {
-		width: 100%;
-	}
 
 	.form-row {
-		/* flex-direction: column; */
+		flex-direction: column;
 		gap: 1rem;
 	}
 	.call-to-action {
@@ -298,13 +335,16 @@ button:active {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin-bottom: 2rem;
 	}
 
 	.header-text,
 	.form-wrapper,
 	.call-to-action {
 		margin: 0 auto;
+	}
+
+	.toggle-btn {
+		width: 3rem;
 	}
 }
 
