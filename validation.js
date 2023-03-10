@@ -7,8 +7,17 @@ const password = document.getElementById("password");
 const passwordConfirm = document.getElementById("password-confirm");
 const submitButton = document.getElementById("submit");
 
+function capitalizeInput(input) {
+	input.addEventListener("input", (e) => {
+		let leadLetter = e.target.value.slice(0, 1).toUpperCase();
+		input.value = leadLetter + e.target.value.slice(1);
+	});
+}
+
 function validateFirstName() {
-	const namePattern = new RegExp("[A-Z]+[A-Za-z-]{1,}");
+	capitalizeInput(firstName);
+
+	const namePattern = new RegExp("[A-Z]+[A-Za-z ,.'-]{1,}");
 	const firstNameValidMark = document.getElementById("first-name-valid-mark");
 	const firstNameInvalidMark = document.getElementById(
 		"first-name-invalid-mark"
@@ -28,7 +37,9 @@ function validateFirstName() {
 }
 
 function validateLastName() {
-	const namePattern = new RegExp("[A-Z]+[A-Za-z-]{1,}");
+	capitalizeInput(lastName);
+
+	const namePattern = new RegExp("[A-Z]+[A-Za-z ,.'-]{1,}");
 	const lastNameValidMark = document.getElementById("last-name-valid-mark");
 	const lastNameInvalidMark = document.getElementById("last-name-invalid-mark");
 	if (lastName.value !== "") {
