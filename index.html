@@ -1,151 +1,244 @@
 <!DOCTYPE html>
 <html lang="en" class="lightmode">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="validation.js" defer></script>
+		<script src="darkModeToggle.js" defer></script>
+		<title>Sign-Up</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="validation.js" defer></script>
-    <script src="darkModeToggle.js" defer></script>
-    <title>Sign-Up</title>
-</head>
+	<body>
+		<div class="page-wrapper">
+			<div class="sidebar">
+				<p>Plant Plug.</p>
 
-<body>
-    <div class="page-wrapper">
-        <div class="sidebar">
+				<img
+					src="./images/pexels-volkan-vardar-5699665.jpg"
+					alt="monstera plant image"
+				/>
+				<p>
+					Photo by Volkan Vardar from
+					<a
+						href=" https://www.pexels.com/photo/big-green-leaves-of-monstera-5699665/"
+						>Pexels</a
+					>
+				</p>
+			</div>
 
-            <p>Plant Plug.</p>
+			<div class="main-content" id="main-page">
+				<button type="button" class="toggle-btn" id="toggle-switch">
+					<svg
+						width="800px"
+						height="800px"
+						viewBox="0 0 24 24"
+						fill="currentColor"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8V16Z"
+							fill="currentColor"
+						/>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4V8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z"
+							fill="currentColor"
+						/>
+					</svg>
+				</button>
+				<div class="header-text">
+					<p>
+						<span class="accent"
+							>Looking for the best plant dealer around?</span
+						>
+					</p>
+					<p>We got you! Let us be your connect.</p>
+					<p>Sign up <span class="italicize">now</span> to get started.</p>
+					<p>You <span class="italicize">know</span> you want to.</p>
+				</div>
+				<div class="form-wrapper">
+					<form id="new-user-form" action="/" method="GET">
+						<fieldset>
+							<legend>Get your plug!</legend>
 
-            <img src="./images/pexels-volkan-vardar-5699665.jpg" alt="monstera plant image">
-            <p>Photo by Volkan Vardar from <a
-                    href=" https://www.pexels.com/photo/big-green-leaves-of-monstera-5699665/">Pexels</a></p>
+							<div class="form-row">
+								<div class="form-input">
+									<div class="label-container">
+										<label for="first-name">First Name</label>
+										<img
+											class="validation-img hidden"
+											id="first-name-valid-mark"
+											src="./images/valid-checkmark.svg"
+										/>
+										<img
+											class="validation-img hidden"
+											id="first-name-invalid-mark"
+											src="./images/invalid-mark.svg"
+										/>
+									</div>
+									<input
+										required
+										pattern="[A-Z]+[A-Za-z ,.'-]{1,}"
+										type="text"
+										id="first-name"
+										name="first-name"
+										placeholder=" Robert"
+									/>
+								</div>
+								<div class="form-input">
+									<div class="label-container">
+										<label for="last-name">Last Name</label>
+										<img
+											class="validation-img hidden"
+											id="last-name-valid-mark"
+											src="./images/valid-checkmark.svg"
+										/>
+										<img
+											class="validation-img hidden"
+											id="last-name-invalid-mark"
+											src="./images/invalid-mark.svg"
+										/>
+									</div>
+									<input
+										required
+										pattern="[A-Z]+[A-Za-z ,.'-]{1,}"
+										type="text"
+										id="last-name"
+										name="last-name"
+										placeholder=" Plant"
+									/>
+								</div>
+							</div>
 
-        </div>
+							<div class="form-row">
+								<div class="form-input">
+									<div class="label-container">
+										<label for="email">Email</label>
+										<img
+											class="validation-img hidden"
+											id="email-valid-mark"
+											src="./images/valid-checkmark.svg"
+										/>
+										<img
+											class="validation-img hidden"
+											id="email-invalid-mark"
+											src="./images/invalid-mark.svg"
+										/>
+									</div>
+									<input
+										required
+										pattern="[A-Za-z0-9!#$%&'*+-/=?^_`{|}~.]+@+[A-Za-z0-9-]+\.+[A-Za-z]{2,}"
+										title=" Please enter a valid email address"
+										type="email"
+										id="email"
+										name="email"
+										placeholder=" plantdaddy@gmail.com"
+									/>
+								</div>
+								<div class="form-input">
+									<div class="label-container">
+										<label for="phone-number">Phone Number</label>
+										<img
+											class="validation-img hidden"
+											id="phone-number-valid-mark"
+											src="./images/valid-checkmark.svg"
+										/>
+										<img
+											class="validation-img hidden"
+											id="phone-number-invalid-mark"
+											src="./images/invalid-mark.svg"
+										/>
+									</div>
+									<input
+										required
+										pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}"
+										title=" Please use hyphens"
+										type="tel"
+										id="phone-number"
+										name="phone-number"
+										placeholder=" (281) 330-8004"
+									/>
+								</div>
+							</div>
 
-        <div class="main-content" id="main-page">
-            <button type="button" class="toggle-btn" id="toggle-switch">
-                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8V16Z" fill="currentColor" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4V8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z"
-                        fill="currentColor" />
-                </svg>
-            </button>
-            <div class="header-text">
+							<div class="form-row">
+								<div class="form-input">
+									<div class="label-container">
+										<label for="password">Password</label>
+										<img
+											class="validation-img hidden"
+											id="password-valid-mark"
+											src="./images/valid-checkmark.svg"
+										/>
+										<img
+											class="validation-img hidden"
+											id="password-invalid-mark"
+											src="./images/invalid-mark.svg"
+										/>
+									</div>
+									<input
+										required
+										pattern="[A-Za-z0-90-9!()-.?{}_`~;:!@#$%^&*+=]{8,}"
+										type="password"
+										id="password"
+										name="password"
+										placeholder=" New password"
+									/>
+									<p class="input-hint">Must be at least 8 characters</p>
+								</div>
+								<div class="form-input">
+									<div class="label-container">
+										<label for="password-confirm">Confirm</label>
+										<img
+											class="validation-img hidden"
+											id="password-confirm-valid-mark"
+											src="./images/valid-checkmark.svg"
+										/>
+										<img
+											class="validation-img hidden"
+											id="password-confirm-invalid-mark"
+											src="./images/invalid-mark.svg"
+										/>
+									</div>
+									<input
+										required
+										pattern="[A-Za-z0-90-9!()-.?{}_`~;:!@#$%^&*+=]{8,}"
+										type="password"
+										id="password-confirm"
+										name="password-confirm"
+										placeholder=" Confirm Password"
+									/>
 
-
-                <p><span class="accent">Looking for the best plant dealer around?</span></p>
-                <p> We got you! Let
-                    us be your connect.
-                </p>
-                <p> Sign up <span class="italicize ">now</span> to get started.</p>
-                <p>You <span class="italicize ">know</span> you want to.</p>
-
-            </div>
-            <div class="form-wrapper">
-                <form id="new-user-form" action="/" method="GET">
-                    <fieldset>
-                        <legend>Get your plug!</legend>
-
-                        <div class="form-row">
-                            <div class="form-input">
-                                <div class="label-container">
-                                    <label for="first-name">First Name</label>
-                                    <img class="validation-img hidden" id="first-name-valid-mark"
-                                        src="./images/valid-checkmark.svg">
-                                    <img class="validation-img hidden" id="first-name-invalid-mark"
-                                        src="./images/invalid-mark.svg">
-                                </div>
-                                <input required pattern="[A-Z]+[A-Za-z ,.'-]{1,}" type="text" id="first-name"
-                                    name="first-name" placeholder=" Robert">
-                            </div>
-                            <div class="form-input">
-                                <div class="label-container">
-                                    <label for="last-name">Last Name</label>
-                                    <img class="validation-img hidden" id="last-name-valid-mark"
-                                        src="./images/valid-checkmark.svg">
-                                    <img class="validation-img hidden" id="last-name-invalid-mark"
-                                        src="./images/invalid-mark.svg">
-                                </div>
-                                <input required pattern="[A-Z]+[A-Za-z ,.'-]{1,}" type="text" id="last-name"
-                                    name="last-name" placeholder=" Plant">
-
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-input">
-                                <div class="label-container">
-                                    <label for="email">Email</label>
-                                    <img class="validation-img hidden" id="email-valid-mark"
-                                        src="./images/valid-checkmark.svg">
-                                    <img class="validation-img hidden" id="email-invalid-mark"
-                                        src="./images/invalid-mark.svg">
-                                </div>
-                                <input required pattern="[A-Za-z0-9!#$%&'*+-/=?^_`{|}~.]+@+[A-Za-z0-9-]+\.+[A-Za-z]{2,}"
-                                    title=" Please enter a valid email address" type="email" id="email" name="email"
-                                    placeholder=" plantdaddy@gmail.com">
-                            </div>
-                            <div class="form-input">
-                                <div class="label-container">
-                                    <label for="phone-number">Phone Number</label>
-                                    <img class="validation-img hidden" id="phone-number-valid-mark"
-                                        src="./images/valid-checkmark.svg">
-                                    <img class="validation-img hidden" id="phone-number-invalid-mark"
-                                        src="./images/invalid-mark.svg">
-                                </div>
-                                <input required pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}" title=" Please use hyphens"
-                                    type="tel" id="phone-number" name="phone-number" placeholder=" (281) 330-8004">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-input">
-                                <div class="label-container">
-                                    <label for="password">Password</label>
-                                    <img class="validation-img hidden" id="password-valid-mark"
-                                        src="./images/valid-checkmark.svg">
-                                    <img class="validation-img hidden" id="password-invalid-mark"
-                                        src="./images/invalid-mark.svg">
-                                </div>
-                                <input required pattern="[A-Za-z0-90-9!()-.?{}_`~;:!@#$%^&*+=]{8,}" type="password"
-                                    id="password" name="password" placeholder=" New password">
-                                <p class="input-hint">Must be at least 8 characters</p>
-                            </div>
-                            <div class="form-input">
-                                <div class="label-container">
-                                    <label for="password-confirm">Confirm</label>
-                                    <img class="validation-img hidden" id="password-confirm-valid-mark"
-                                        src="./images/valid-checkmark.svg">
-                                    <img class="validation-img hidden" id="password-confirm-invalid-mark"
-                                        src="./images/invalid-mark.svg">
-                                </div>
-                                <input required pattern="[A-Za-z0-90-9!()-.?{}_`~;:!@#$%^&*+=]{8,}" type="password"
-                                    id="password-confirm" name="password-confirm" placeholder=" Confirm Password">
-
-                                <p id="password-error" class="hidden password-mismatch">Please ensure your passwords
-                                    match</p>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-            <div class="call-to-action">
-                <button id="submit" type="submit" form="new-user-form">Sign Up</button>
-                <p>Already have an account? <a href="./index.html">Log In</a></p>
-                <p><span class="italicize small">This is not a real online service!</span>
-                </p>
-            </div>
-            <footer class="footer">
-                <p>Created by <a href="https://github.com/probableactions">probableactions</a></p>
-                <img src="./images/github-mark-white.svg" alt="GitHub logo">
-            </footer>
-        </div>
-
-    </div>
-
-</body>
-
+									<p id="password-error" class="hidden password-mismatch">
+										Please ensure your passwords match
+									</p>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+				<div class="call-to-action">
+					<button id="submit" type="submit" form="new-user-form">
+						Sign Up
+					</button>
+					<p>Already have an account? <a href="./index.html">Log In</a></p>
+					<p>
+						<span class="italicize small"
+							>This is not a real online service!</span
+						>
+					</p>
+				</div>
+				<footer class="footer">
+					<p>Created by <a href="https://github.com/jlyon12">jlyon12</a></p>
+					<img src="./images/github-mark-white.svg" alt="GitHub logo" />
+				</footer>
+			</div>
+		</div>
+	</body>
 </html>

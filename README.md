@@ -3,7 +3,7 @@
 Sign Up Form Project Assignment from The Odin Project
 
 <strong>Live Demo</strong> : <br>
-https://probableactions.github.io/sign-up-form/
+https://jlyon12.github.io/sign-up-form/
 
 <strong>Image Attributions:</strong>
 
